@@ -1,0 +1,42 @@
+﻿@model Cervejaria.Models.Atendimento
+
+@{
+    ViewBag.Title = "Atendimento";
+}
+
+    <h2 style="margin-left:10px">Atendimento</h2>
+
+<div>
+    <h4>Atendimento</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Compra.CompraId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Compra.CompraId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Funcionario.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Funcionario.Nome)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AtendimentoId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Cervejaria.Models.Saida>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 style="margin-left:10px">Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdInsumo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantidade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Valor)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdInsumo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantidade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Valor)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SaidaId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SaidaId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SaidaId })
+        </td>
+    </tr>
+}
+
+</table>

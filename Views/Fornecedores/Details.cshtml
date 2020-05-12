@@ -1,0 +1,34 @@
+﻿@model Cervejaria.Models.Fornecedor
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 style="margin-left:10px">Details</h2>
+
+<div>
+    <h4>Fornecedor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CNPJ)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CNPJ)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.FornecedorId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

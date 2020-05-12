@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="45676a2fb25a4753a3265b4aea762496" Name="Diagram1">
+        <EntityTypeShape EntityType="CervejariaModel.Atendimento" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CervejariaModel.Cliente" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CervejariaModel.Compra" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CervejariaModel.Entrada" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CervejariaModel.Fornecedor" Width="1.5" PointX="5.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="CervejariaModel.Funcionario" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CervejariaModel.Insumo" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CervejariaModel.ItemCompra" Width="1.5" PointX="8" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CervejariaModel.ItemEstoque" Width="1.5" PointX="8" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CervejariaModel.ItemReceita" Width="1.5" PointX="3" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CervejariaModel.Produto" Width="1.5" PointX="5.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="CervejariaModel.Receita" Width="1.5" PointX="0.75" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CervejariaModel.Saida" Width="1.5" PointX="5.75" PointY="10.125" IsExpanded="true" />
+        <AssociationConnector Association="CervejariaModel.FK_Atendimento_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="CervejariaModel.FK_Atendimento_Compra" ManuallyRouted="false" />
+        <AssociationConnector Association="CervejariaModel.FK_Atendimento_Funcionario" ManuallyRouted="false" />
+        <AssociationConnector Association="CervejariaModel.FK_Entrada_Compra" ManuallyRouted="false" />
+        <AssociationConnector Association="CervejariaModel.FK_ItemCompra_Fornecedor" ManuallyRouted="false" />
+        <AssociationConnector Association="CervejariaModel.FK_ItemReceita_Insumo" ManuallyRouted="false" />
+        <AssociationConnector Association="CervejariaModel.FK_ItemCompra_Produto" ManuallyRouted="false" />
+        <AssociationConnector Association="CervejariaModel.FK_ItemEstoque_Produto" ManuallyRouted="false" />
+        <AssociationConnector Association="CervejariaModel.FK_ItemReceita_Receita" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="CervejariaModel.Acesso" Width="1.5" PointX="0.75" PointY="17" />
+        <AssociationConnector Association="CervejariaModel.FK_Funcionario_Acesso" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

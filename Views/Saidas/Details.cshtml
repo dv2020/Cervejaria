@@ -1,0 +1,42 @@
+﻿@model Cervejaria.Models.Saida
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 style="margin-left:10px">Details</h2>
+
+<div>
+    <h4>Saida</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdInsumo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdInsumo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Valor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Valor)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SaidaId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

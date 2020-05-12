@@ -1,0 +1,114 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+
+    <title>Cervejaria</title>
+
+    <!-- Loading third party fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:100,300,400,700|" rel="stylesheet" type="text/css">
+    <link href="~/Content/Home/fonts/font-awesome.min.css" rel="stylesheet" />
+    <!-- Loading main css file -->
+
+    <link href="~/Content/Home/style.css" rel="stylesheet" />
+
+    <!--[if lt IE 9]>
+    <script src="~/Content/Home/js/ie-support/html5.js"></script>
+    <script src="~/Content/Home/js/ie-support/respond.js"></script>
+    <![endif]-->
+
+</head>
+
+@if (string.IsNullOrEmpty(Convert.ToString(@Session["Nome"])))
+{
+    <meta http-equiv="refresh" content="0; URL='/Acessos/Login'" />
+}
+
+
+                    <main class="main-content">
+                        <div class="home-blocks">
+                            <div class="hero large-block bg-orange">
+                                <img src="~/Content/Home/dummy/bottles.png" alt="" class="bg-image">
+                                <div class="inner-content">
+                                    <h1 class="section-title">Curabitur euismod</h1>
+                                    <small class="section-subtitle">Duis vitae tristique turpis</small>
+                                    <ul>
+                                        <li>Duis aliquam risus </li>
+                                        <li>Vitae tempor varius</li>
+                                        <li>Curabitur consectetur </li>
+                                        <li>Mauris tincidunt </li>
+                                    </ul>
+                                    <a href="#" class="more-link"></a>
+                                </div>
+                            </div>
+                            <div class="small-block bg-blue">
+                                <img src="~/Content/Home/dummy/cheers.png" alt="" class="bg-image">
+                                <h2 class="section-title">Voluptatem sequi</h2>
+                                <a href="#" class="more-link"></a>
+                            </div>
+                            <div class="small-block bg-green">
+                                <img src="~/Content/Home/dummy/glass.png" alt="" class="bg-image">
+                                <h2 class="section-title">Neque quisquam</h2>
+                                <a href="#" class="more-link"></a>
+                            </div>
+                            <div class="small-block" data-bg-color="#1d191a">
+                                <h2 class="section-title">News</h2>
+                                <ul class="news">
+                                    <li>
+                                        <span class="date">8 Aug</span>
+                                        <h2 class="entry-title"><a href="#">Consectetur adipisicing eiusmod incididunt.</a></h2>
+                                    </li>
+                                    <li>
+                                        <span class="date">8 Aug</span>
+                                        <h2 class="entry-title"><a href="#">Consectetur adipisicing eiusmod incididunt.</a></h2>
+                                    </li>
+                                    <li>
+                                        <span class="date">8 Aug</span>
+                                        <h2 class="entry-title"><a href="#">Consectetur adipisicing eiusmod incididunt.</a></h2>
+                                    </li>
+                                    <li>
+                                        <span class="date">8 Aug</span>
+                                        <h2 class="entry-title"><a href="#">Consectetur adipisicing eiusmod incididunt.</a></h2>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="small-block" data-bg-color="#272324">
+                                <h2 class="section-title">Order request</h2>
+                                <p>Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                                <form action="#" class="order-form">
+                                    <p>
+                                        <label for="#">Your name:</label>
+                                        <input type="text">
+                                    </p>
+                                    <p>
+                                        <label for="#">Email:</label>
+                                        <input type="text">
+                                    </p>
+                                    <p>
+                                        <label for="#">Phone:</label>
+                                        <input type="text">
+                                    </p>
+                                    <p class="text-right">
+                                        <input type="submit" value="Send request">
+                                    </p>
+                                </form>
+                            </div>
+                        </div>
+                    </main>
+
+       
+
+
+    <script src="~/Content/Home/js/jquery-1.11.1.min.js"></script>
+    <script src="~/Content/Home/js/plugins.js"></script>
+    <script src="~/Content/Home/js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+﻿@model Cervejaria.Models.ItemReceita
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 style="margin-left:10px">Details</h2>
+
+<div>
+    <h4>ItemReceita</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Insumo.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Insumo.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Receita.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Receita.Nome)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ItemReceitaId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

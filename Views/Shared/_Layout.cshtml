@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Só Cervejaria</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <!-- Loading third party fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:100,300,400,700|" rel="stylesheet" type="text/css">
+    <link href="~/Content/Home/fonts/font-awesome.min.css" rel="stylesheet" />
+    <!-- Loading main css file -->
+
+    <link href="~/Content/Home/style.css" rel="stylesheet" />
+</head>
+<body>
+    @if (string.IsNullOrEmpty(Convert.ToString(@Session["Nome"])))
+    {
+        <meta http-equiv="refresh" content="0; URL='/Acessos/Login'" />
+    }
+    <div id="site-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 header-container">
+                    <header class="site-header">
+                        <div id="branding">
+                            <img src="~/Content/Home/images/logo.png" alt="" class="logo">
+                            <div class="logo-text">
+                                <h1 class="site-title"><a href="index.html">Só Cervejaria</a></h1>
+                                <smal class="site-description">Bem vindo, @Session["Nome"]  @Session["Sobrenome"]</smal>
+                                <h1 class="site-description">   @Html.ActionLink("Sair do sistema", "Logout", "Acessos")</h1>
+                            </div>
+                        </div>
+                        <button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+
+                        <div class="collapsible">
+                            <!-- Default snippet for navigation -->
+                            <div class="main-navigation">
+                                <ul class="menu">
+                                    <li class="menu-item"><a href="~/Home/"><span class="icon-about"></span>INÍCIO </a></li>
+                                    @try
+                                    {
+                                        if (Session["Perfil"].ToString() == "SuperAdmin")
+                                        {
+                                            <li class="menu-item"><a href="~/Acessos/"><span class="icon-about"></span>Gestão de Acessos</a></li>
+                                        }
+                                    }
+                                    catch
+                                    {
+
+                                    }
+                                    <li class="menu-item"><a href="~/Atendimentos/"><span class="icon-about"></span>Atendimentos</a></li>
+                                    <li class="menu-item"><a href="~/Clientes/"><span class="icon-about"></span>Clientes</a></li>
+                                    <li class="menu-item"><a href="~/Compras/"><span class="icon-about"></span>Compras</a></li>
+                                    <li class="menu-item"><a href="~/Entradas/"><span class="icon-about"></span>Entradas</a></li>
+                                    <li class="menu-item"><a href="~/Fornecedores/"><span class="icon-about"></span>Fornecedores</a></li>
+                                    <li class="menu-item"><a href="~/Insumos/"><span class="icon-about"></span>Insumos</a></li>
+                                    <li class="menu-item"><a href="~/ItemCompras/"><span class="icon-about"></span>ItemCompras</a></li>
+                                    <li class="menu-item"><a href="~/ItemEstoques/"><span class="icon-about"></span>ItemEstoques</a></li>
+                                    <li class="menu-item"><a href="~/ItemReceitas/"><span class="icon-about"></span>ItemReceitas</a></li>
+                                    <li class="menu-item"><a href="~/Produtos/"><span class="icon-about"></span>Produtos</a></li>
+                                    <li class="menu-item"><a href="~/Receitas/"><span class="icon-about"></span>Receitas</a></li>
+                                    <li class="menu-item"><a href="~/Saidas/"><span class="icon-about"></span>Saidas</a></li>
+                                </ul> <!-- .menu -->
+                            </div> <!-- .main-navigation -->
+                            @*<div class="social-links">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                                    <a href="#"><i class="fa fa-pinterest"></i></a>
+                                </div>*@
+                        </div>
+
+                    </header>
+                </div>
+                <div class="col-md-10">
+                    <main style="margin-top:90px; height:600px; background-color:#231f20; border-width:1px; border-style:solid; border-color:white" class="main-content">
+
+                        @RenderBody()
+
+                    </main>
+
+                    <footer class="site-footer" style="align-self:end">
+                        <div class="newsletter">
+                            <div class="colophon">Só Cervejaria. Todos os direitos reservados. @DateTime.Now.Year (R)</div>
+                        </div>
+
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/Content/Home/js/jquery-1.11.1.min.js"></script>
+    <script src="~/Content/Home/js/plugins.js"></script>
+    <script src="~/Content/Home/js/app.js"></script>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
