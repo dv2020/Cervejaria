@@ -16,4 +16,4 @@ Integrantes:
 
 Davi Custódio Burdinski  RA: 2019101829
 Everton Ferens           RA: 2019101828
-Gustavo Daros            RA: Aguardando envio da RA.
+Gustavo Daros            RA: 2019102342
